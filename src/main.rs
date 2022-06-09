@@ -3,11 +3,11 @@ mod test;
 
 fn main() {
 
-    let game = game::new("Game");
+    let game = game::new("Game".to_string());
 
     println!("{}", game.get_window_name());
 
-    game.set_window_name("Game 2");
+    game.set_window_name("Game 2".to_string());
 
     println!("{}", game.get_window_name());
 
@@ -15,10 +15,12 @@ fn main() {
 
     println!("{}", game_instance.get_window_name());
 
-    game_instance.set_window_name("Game 3");
+    game_instance.set_window_name("Game 3".to_string());
 
     println!("{}", game_instance.get_window_name());
 
     test::test();
+
+    test::test_thread();
 
 }
